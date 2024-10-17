@@ -1,11 +1,12 @@
 import React from "react";
-import Clock, { DayOfWeek, WeatherComponent } from "./location-data/clock";
+
+import Clock, { DayOfWeek, WeatherComponent } from "./location-data/LocalData";
+import Schedule from "./location-data/Schedule";
 
 const HomePage = () => {
     return (
         <div>
-            <h2 className="text-center text-5xl">The Board</h2>
-            <div className="flex justify-between border border-blue-500">
+            <div id="local-data">
                 <div>
                     <Clock />
                 </div>
@@ -15,6 +16,17 @@ const HomePage = () => {
                 <div>
                     <WeatherComponent />
                 </div>
+            </div>
+
+            <div id="reminder-list">
+                <ul>
+                    <li>You got COVID booster on 1/1/24</li>
+                    <li>TV remote is on the coffee table</li>
+                </ul>
+            </div>
+
+            <div id="main">
+                <Schedule />
             </div>
         </div>
     );

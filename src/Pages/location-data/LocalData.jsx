@@ -22,8 +22,8 @@ function Clock() {
     }, []);
 
     return (
-        <div>
-            <h1>Current Time: {time}</h1>
+        <div id="clock">
+            <h1>{time}</h1>
         </div>
     );
 }
@@ -43,16 +43,19 @@ export function DayOfWeek() {
         return () => clearInterval(intervalId);
     }, []);
 
-    const options = {
+    const dayOption = {
         weekday: "long",
+    };
+
+    const dateOption = {
         year: "numeric",
         month: "long",
         day: "numeric",
     };
-
     return (
-        <div>
-            <p>{date.toLocaleDateString(undefined, options)}</p>
+        <div id="day-of-week">
+            <p>{date.toLocaleDateString(undefined, dayOption)}</p>
+            <p>{date.toLocaleDateString(undefined, dateOption)}</p>
         </div>
     );
 }
@@ -116,7 +119,7 @@ export function WeatherComponent() {
     if (error) return <p>Error: {error}</p>;
 
     return (
-        <div>
+        <div id="location">
             <h2>{locationName}</h2>
             <p>{temperature}°C</p>
         </div>

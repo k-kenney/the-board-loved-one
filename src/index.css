@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#local-data {
+    background-color: #252525;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px 10px 20px;
+}
+
+#clock,
+#day-of-week,
+#location {
+    color: white;
+}
+
+#reminder-list ul {
+    color: white;
+    text-align: center;
+    background-color: #b45700;
+}
+
+#main {
+    background-color: #2c2c2e;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+#schedule {
+    background-color: #1a616e;
+    border-radius: 25px;
+    width: 90%;
+    padding: 20px;
+}
