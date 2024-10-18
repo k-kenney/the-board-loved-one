@@ -30,7 +30,7 @@ function Clock() {
 
 export default Clock;
 
-// Get Day of the week
+//-------- Get Day of the week
 
 export function DayOfWeek() {
     const [date, setDate] = useState(new Date());
@@ -54,13 +54,13 @@ export function DayOfWeek() {
     };
     return (
         <div id="day-of-week">
-            <p>{date.toLocaleDateString(undefined, dayOption)}</p>
+            <h2>{date.toLocaleDateString(undefined, dayOption)}</h2>
             <p>{date.toLocaleDateString(undefined, dateOption)}</p>
         </div>
     );
 }
 
-// Location Name and temp function
+//---------- Location Name and temp function
 
 export function WeatherComponent() {
     const [locationName, setLocationName] = useState("");
@@ -74,11 +74,15 @@ export function WeatherComponent() {
     async function fetchWeatherData(lat, lon) {
         try {
             const response = await fetch(
-                `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
+                `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`
             );
             const data = await response.json();
             if (response.ok) {
-                setTemperature(data.main.temp);
+                // Convert temperature from Kelvin to Fahrenheit and round it
+                const tempInFahrenheit = Math.round(
+                    ((data.main.temp - 273.15) * 9) / 5 + 32
+                );
+                setTemperature(tempInFahrenheit);
                 setLocationName(data.name); // Setting the location name (city)
                 setLoading(false);
             } else {
@@ -121,7 +125,7 @@ export function WeatherComponent() {
     return (
         <div id="location">
             <h2>{locationName}</h2>
-            <p>{temperature}°C</p>
+            <p>{temperature}°F</p>
         </div>
     );
 }

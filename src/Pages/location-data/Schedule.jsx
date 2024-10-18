@@ -21,7 +21,7 @@ function Schedule() {
 
     return (
         <div id="schedule">
-            <h2 className="text-2xl mb-4">Daily Schedule</h2>
+            <h2 className="text-2xl mb-4">Today's Schedule</h2>
             <div className="grid grid-cols-2 gap-4">
                 {/* First Column */}
                 <ul>
