@@ -71,8 +71,8 @@ const HomePage = () => {
         </ul>
       </div>
 
-      <div id="main">
-        <Schedule />
+      <div id="main" className="bg-lightBlue h-[75vh]">
+        <Schedule/>
       </div>
     </div>
   );
