@@ -1,5 +1,6 @@
 import React from "react";
 import LogoImage from "../assets/logoGrey.png";
+import SignUpPage from "./SignUpPage";
 
 const LoginPage = () => {
     return (
@@ -14,7 +15,7 @@ const LoginPage = () => {
             </button>
             <div id="sign-up-info" className="pt-5">
                 <p>Don't have and account?</p>
-                <a className="pl-5" href="">
+                <a className="pl-5" href="/sign-up">
                     Sign Up
                 </a>
             </div>

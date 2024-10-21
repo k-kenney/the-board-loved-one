@@ -53,7 +53,7 @@
     justify-content: center;
 }
 
-#login-bt {
+button {
     background-color: #77cfff;
     border: #77cfff solid 2px;
     width: 20%;
@@ -65,3 +65,55 @@
     justify-content: space-between;
 }
 /*-------- End of Login Page Styles -------- */
+
+/*-------- Sign Up Page Styles -------- */
+#sign-up-page {
+    border: #4c4e69 solid 1px;
+    padding: 25px;
+}
+
+#sign-up-page img {
+    margin-left: -15px;
+}
+
+#sign-up-header {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: center;
+    margin-top: -40px;
+}
+
+#sign-up-header img {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+
+#sign-up-header h2 {
+    font-size: 1.5rem;
+    margin-right: 35px;
+    margin-top: -15px;
+}
+
+#sign-up-main {
+    width: 75%;
+    margin-top: -20px;
+}
+
+#sign-up-main h2 {
+    font-size: 1.5rem;
+}
+#sign-up-main img {
+    border: black 5px solid;
+    width: 25%;
+    margin: 20px 0;
+}
+
+#sign-up-main button {
+    margin-top: 20px;
+    padding: 5px;
+    width: 200px;
+}
+
+/*-------- End of Sign Up Page Styles -------- */

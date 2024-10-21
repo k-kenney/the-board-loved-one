@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import LoginPage from "./Pages/LoginPage";
 import HomePage from "./Pages/HomePage";
+import SignUpPage from "./Pages/SignUpPage";
 
 function App() {
     return (
@@ -13,12 +14,16 @@ function App() {
                     <li>
                         <Link to="/login">Login</Link>
                     </li>
+                    <li>
+                        <Link to="/sign-up">Sign Up</Link>
+                    </li>
                 </ul>
             </nav>
 
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/login" element={<LoginPage />} />
+                <Route path="/sign-up" element={<SignUpPage />} />
             </Routes>
         </Router>
     );
