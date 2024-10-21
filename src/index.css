@@ -36,3 +36,32 @@
     width: 90%;
     padding: 20px;
 }
+
+/*-------- Login Page Styles -------- */
+
+#login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#logo-image {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+#login-bt {
+    background-color: #77cfff;
+    border: #77cfff solid 2px;
+    width: 20%;
+    border-radius: 25px;
+}
+
+#sign-up-info {
+    display: flex;
+    justify-content: space-between;
+}
+/*-------- End of Login Page Styles -------- */

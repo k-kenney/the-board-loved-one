@@ -1,7 +1,25 @@
 import React from "react";
+import LogoImage from "../assets/logoGrey.png";
 
 const LoginPage = () => {
-    return <h1>Hello Login Page</h1>;
+    return (
+        <div id="login-page">
+            <div id="logo-image">
+                <img src={LogoImage} alt="Logo Grey" />
+            </div>
+
+            <h1 className="text-5xl pb-10">The Board</h1>
+            <button id="login-bt" className="text-1xl ">
+                Login
+            </button>
+            <div id="sign-up-info" className="pt-5">
+                <p>Don't have and account?</p>
+                <a className="pl-5" href="">
+                    Sign Up
+                </a>
+            </div>
+        </div>
+    );
 };
 
 export default LoginPage;
