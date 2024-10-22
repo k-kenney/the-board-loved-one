@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 function Clock() {
     const [time, setTime] = useState(
         new Date().toLocaleTimeString([], {
-            hour: "2-digit",
+            hour: "numeric",
             minute: "2-digit",
         })
     );
@@ -12,7 +12,7 @@ function Clock() {
         const intervalId = setInterval(() => {
             setTime(
                 new Date().toLocaleTimeString([], {
-                    hour: "2-digit",
+                    hour: "numeric",
                     minute: "2-digit",
                 })
             );
