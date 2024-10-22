@@ -4,7 +4,7 @@ import SignUpPage from "./SignUpPage";
 
 const LoginPage = () => {
     return (
-        <div id="login-page">
+        <div id="login-page" className="font-font h-[75vh]">
             <div id="logo-image">
                 <img src={LogoImage} alt="Logo Grey" />
             </div>
@@ -15,7 +15,7 @@ const LoginPage = () => {
             </button>
             <div id="sign-up-info" className="pt-5">
                 <p>Don't have and account?</p>
-                <a className="pl-5" href="/sign-up">
+                <a className="pl-5 text-darkPurple" href="/sign-up">
                     Sign Up
                 </a>
             </div>

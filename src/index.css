@@ -2,40 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-#local-data {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* #local-data {
     padding: 15px 20px 10px 20px;
-}
+} */
 
-#clock,
-#day-of-week,
-#location {
-    color: black;
-}
-
-#reminder-list ul {
-    color: balck;
+/* #reminder-list ul {
     text-align: center;
-    background-color: #fbca51;
-}
+} */
 
-#main {
-    background-color: #c2eefe;
+/* #main {
     padding: 15px 0;
-    display: flex;
-    justify-content: center;
-    color: black;
-}
-
+} */
+/* 
 #schedule {
-    background-color: #77cfff;
-    border: 5px solid #4c4e69;
-    border-radius: 25px;
     width: 90%;
     padding: 20px;
-}
+} */
 
 /*-------- Login Page Styles -------- */
 

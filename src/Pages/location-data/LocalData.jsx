@@ -22,7 +22,7 @@ function Clock() {
     }, []);
 
     return (
-        <div id="clock">
+        <div id="clock" className="text-3xl">
             <h1>{time}</h1>
         </div>
     );
@@ -54,8 +54,12 @@ export function DayOfWeek() {
     };
     return (
         <div id="day-of-week">
-            <h2>{date.toLocaleDateString(undefined, dayOption)}</h2>
-            <p>{date.toLocaleDateString(undefined, dateOption)}</p>
+            <h2 className="text-3xl">
+                {date.toLocaleDateString(undefined, dayOption)}
+            </h2>
+            <p className="text-sm text-center">
+                {date.toLocaleDateString(undefined, dateOption)}
+            </p>
         </div>
     );
 }
@@ -124,8 +128,8 @@ export function WeatherComponent() {
 
     return (
         <div id="location">
-            <h2>{locationName}</h2>
-            <p>{temperature}°F</p>
+            <h2 className="text-xl">{locationName}</h2>
+            <p className="text-3xl">{temperature}°F</p>
         </div>
     );
 }

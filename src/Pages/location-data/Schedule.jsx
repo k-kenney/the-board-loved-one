@@ -20,7 +20,10 @@ function Schedule() {
     const secondHalf = schedule.slice(Math.ceil(schedule.length / 2));
 
     return (
-        <div id="schedule">
+        <div
+            id="schedule"
+            className="bg-blue border-4 border-gray rounded-lg w-[90%] p-5"
+        >
             <h2 className="text-2xl mb-4">Today's Schedule</h2>
             <div className="grid grid-cols-2 gap-4">
                 {/* First Column */}
