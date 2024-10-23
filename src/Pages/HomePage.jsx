@@ -41,15 +41,15 @@ const HomePage = () => {
         fetchConcernsEvents(); // Call the function inside useEffect when the component mounts
     }, [lovedOneKey]); // Runs whenever lovedOneKey changes
 
-    if (loading) {
-        return <p>Loading...</p>;
-    }
+    // if (loading) {
+    //     return <p>Loading...</p>;
+    // }
 
     return (
         <div className="font-font">
             <div
                 id="local-data"
-                className="flex justify-between px-4 pb-1 pt-5"
+                className="flex justify-between px-14 pb-1 pt-10"
             >
                 <div>
                     <Clock />
@@ -62,11 +62,16 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <div id="reminder-list" className="bg-yellow text-center">
+            <div
+                id="reminder-list"
+                className="bg-yellow text-center py-3 lg:text-2xl "
+            >
                 <ul>
                     {concerns.length > 0 ? (
                         concerns.map((concern) => (
-                            <li key={concern.$id}>{concern.concern}</li>
+                            <li className="py-1" key={concern.$id}>
+                                • {concern.concern}{" "}
+                            </li>
                         ))
                     ) : (
                         <li>No concerns found.</li>

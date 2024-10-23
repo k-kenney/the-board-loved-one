@@ -24,12 +24,12 @@ function Schedule() {
             id="schedule"
             className="bg-blue border-4 border-gray rounded-lg w-[90%] p-5"
         >
-            <h2 className="text-2xl mb-4">Today's Schedule</h2>
-            <div className="grid grid-cols-2 gap-4">
+            <h2 className="text-2xl mb-4 py-3 lg:text-4xl">Today's Schedule</h2>
+            <div className="grid grid-cols-2 gap-4 lg:text-2xl">
                 {/* First Column */}
                 <ul>
                     {firstHalf.map((item, index) => (
-                        <li key={index} className="mb-2">
+                        <li key={index} className="mb-2 py-3">
                             {item.time} - {item.activity}
                         </li>
                     ))}
@@ -38,7 +38,7 @@ function Schedule() {
                 {/* Second Column */}
                 <ul>
                     {secondHalf.map((item, index) => (
-                        <li key={index} className="mb-2">
+                        <li key={index} className="mb-2 py-3">
                             {item.time} - {item.activity}
                         </li>
                     ))}
