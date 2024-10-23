@@ -6,7 +6,7 @@ import SignUpPage from "./Pages/SignUpPage";
 function App() {
     return (
         <Router>
-            <nav>
+            {/* <nav>
                 <ul>
                     <li>
                         <Link to="/">Home</Link>
@@ -18,7 +18,7 @@ function App() {
                         <Link to="/sign-up">Sign Up</Link>
                     </li>
                 </ul>
-            </nav>
+            </nav> */}
 
             <Routes>
                 <Route path="/" element={<HomePage />} />
