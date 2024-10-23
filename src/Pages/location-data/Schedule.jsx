@@ -24,8 +24,8 @@ function Schedule() {
             id="schedule"
             className="bg-blue border-4 border-gray rounded-lg w-[90%] p-5"
         >
-            <h2 className="text-2xl mb-4">Today's Schedule</h2>
-            <div className="grid grid-cols-2 gap-4">
+            <h2 className="text-2xl mb-4 lg:text-3xl">Today's Schedule</h2>
+            <div className="grid grid-cols-2 gap-4 lg:text-2xl">
                 {/* First Column */}
                 <ul>
                     {firstHalf.map((item, index) => (

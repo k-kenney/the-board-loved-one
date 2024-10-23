@@ -62,7 +62,7 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <div id="reminder-list" className="bg-yellow text-center">
+            <div id="reminder-list" className="bg-yellow text-center py-3">
                 <ul>
                     {concerns.length > 0 ? (
                         concerns.map((concern) => (
