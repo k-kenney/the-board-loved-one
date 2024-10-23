@@ -3,14 +3,14 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
+    "homepage": "https://k-kenney.github.io/the-board-loved-one/",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
         "lint": "eslint .",
         "preview": "vite preview",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build",
-        "homepage": "https://k-kenney.github.io/the-board-loved-one"
+        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "appwrite": "^16.0.2",
