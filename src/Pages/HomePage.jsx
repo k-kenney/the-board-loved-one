@@ -59,18 +59,13 @@ const HomePage = () => {
         // Construct the time string without a leading zero in the hour
         const formattedTime = `${hours}:${formattedMinutes} ${ampm}`;
         return (
-            <li key={event.$id} className="text-base text-white font-qregular">
-                {formattedTime} {event.title}
+            <li key={event.$id}>
+                {formattedTime} - {event.title}
             </li>
         );
     });
 
     return (
-      <li key={event.$id} className="text-base text-black font-qregular">
-        {formattedTime} {event.title}
-      </li>
-    );
-  });
         <div className="font-font">
             <div
                 id="local-data"
@@ -86,7 +81,6 @@ const HomePage = () => {
                     <WeatherComponent />
                 </div>
             </div>
-
 
             <div
                 id="reminder-list"
@@ -105,59 +99,41 @@ const HomePage = () => {
                 </ul>
             </div>
 
-      <div
-        id="reminder-list"
-        className="bg-yellow text-center py-3 lg:text-2xl "
-      >
-        <ul>
-          {concerns.length > 0 ? (
-            concerns.map((concern) => (
-              <li className="py-1" key={concern.$id}>
-                • {concern.concern}{" "}
-              </li>
-            ))
-          ) : (
-            <li>No concerns found.</li>
-          )}
-        </ul>
-      </div>
-      
-      <div
-        id="main"
-        className="flex justify-center text-black bg-lightBlue h-[75vh] py-4"
-      >
-        <div className="grid grid-cols-2 gap-8">
-          {/* First column */}
-          <ul>
-            {event_list
-              .slice(0, Math.ceil(event_list.length / 2))
-              .map((event, index) => (
-                <li
-                  key={event.$id}
-                  className="text-base text-black font-qregular"
-                >
-                  {event}
-                </li>
-              ))}
-          </ul>
+            <div
+                id="main"
+                className="flex justify-center text-black bg-lightBlue h-[75vh] py-4"
+            >
+                <div className="grid grid-cols-2 gap-8">
+                    {/* First column */}
+                    <ul>
+                        {event_list
+                            .slice(0, Math.ceil(event_list.length / 2))
+                            .map((event, index) => (
+                                <li
+                                    key={event.$id}
+                                    className="text-base text-black font-qregular"
+                                >
+                                    {event}
+                                </li>
+                            ))}
+                    </ul>
 
-          {/* Second column */}
-          <ul>
-            {event_list
-              .slice(Math.ceil(event_list.length / 2))
-              .map((event, index) => (
-                <li
-                  key={event.$id}
-                  className="text-base text-black font-qregular"
-                >
-                  {event}
-                </li>
-              ))}
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
+                    {/* Second column */}
+                    <ul>
+                        {event_list
+                            .slice(Math.ceil(event_list.length / 2))
+                            .map((event, index) => (
+                                <li
+                                    key={event.$id}
+                                    className="text-base text-black font-qregular"
+                                >
+                                    {event}
+                                </li>
+                            ))}
+                    </ul>
+                </div>
+            </div>
+
             <div
                 id="main"
                 className="flex justify-center bg-lightBlue h-[75vh] py-4"
@@ -169,13 +145,14 @@ const HomePage = () => {
                     <h2 className="text-2xl mb-4 py-3 lg:text-4xl">
                         Today's Schedule
                     </h2>
-
                     <ul>{event_list}</ul>
                 </div>
             </div>
         </div>
     );
 };
+
+//---------------test below
 
 export default HomePage;
 removeEventListener;
