@@ -11,7 +11,7 @@ const HomePage = () => {
     const lovedOneKey = "1234";
 
     useEffect(() => {
-        // Function to fetch concerns
+        // Function to fetch concerns and events
         const fetchConcernsEvents = async () => {
             try {
                 // Fetch loved one's ID
@@ -29,7 +29,7 @@ const HomePage = () => {
                 // Update state with fetched events
                 setEvents(fetchedEvents);
             } catch (err) {
-                // Handle any errors - not sure what we want to do here.
+                // Handle any errors
                 console.error("Error:", err);
             } finally {
                 setLoading(false); // Stop loading once the fetch is complete
@@ -48,7 +48,7 @@ const HomePage = () => {
         const timeString = event.start_time;
         // Convert the timeString (in UTC) to a Date object
         const eventDate = new Date(timeString);
-        // Extract the hours and minutes. This will return the hours in local time.
+        // Extract the hours and minutes in local time.
         let hours = eventDate.getHours();
         const minutes = eventDate.getMinutes();
         // Convert to 12-hour format and handle AM/PM
@@ -66,11 +66,6 @@ const HomePage = () => {
     });
 
     return (
-      <li key={event.$id} className="text-base text-black font-qregular">
-        {formattedTime} {event.title}
-      </li>
-    );
-  });
         <div className="font-font">
             <div
                 id="local-data"
@@ -87,16 +82,15 @@ const HomePage = () => {
                 </div>
             </div>
 
-
             <div
                 id="reminder-list"
-                className="bg-yellow text-center py-3 lg:text-2xl "
+                className="bg-yellow text-center py-3 lg:text-2xl"
             >
                 <ul>
                     {concerns.length > 0 ? (
                         concerns.map((concern) => (
                             <li className="py-1" key={concern.$id}>
-                                • {concern.concern}{" "}
+                                • {concern.concern}
                             </li>
                         ))
                     ) : (
@@ -105,59 +99,41 @@ const HomePage = () => {
                 </ul>
             </div>
 
-      <div
-        id="reminder-list"
-        className="bg-yellow text-center py-3 lg:text-2xl "
-      >
-        <ul>
-          {concerns.length > 0 ? (
-            concerns.map((concern) => (
-              <li className="py-1" key={concern.$id}>
-                • {concern.concern}{" "}
-              </li>
-            ))
-          ) : (
-            <li>No concerns found.</li>
-          )}
-        </ul>
-      </div>
-      
-      <div
-        id="main"
-        className="flex justify-center text-black bg-lightBlue h-[75vh] py-4"
-      >
-        <div className="grid grid-cols-2 gap-8">
-          {/* First column */}
-          <ul>
-            {event_list
-              .slice(0, Math.ceil(event_list.length / 2))
-              .map((event, index) => (
-                <li
-                  key={event.$id}
-                  className="text-base text-black font-qregular"
-                >
-                  {event}
-                </li>
-              ))}
-          </ul>
+            <div
+                id="main"
+                className="flex justify-center text-black bg-lightBlue h-[75vh] py-4"
+            >
+                <div className="grid grid-cols-2 gap-8">
+                    {/* First column */}
+                    <ul>
+                        {event_list
+                            .slice(0, Math.ceil(event_list.length / 2))
+                            .map((event, index) => (
+                                <li
+                                    key={event.$id}
+                                    className="text-base text-black font-qregular"
+                                >
+                                    {event}
+                                </li>
+                            ))}
+                    </ul>
 
-          {/* Second column */}
-          <ul>
-            {event_list
-              .slice(Math.ceil(event_list.length / 2))
-              .map((event, index) => (
-                <li
-                  key={event.$id}
-                  className="text-base text-black font-qregular"
-                >
-                  {event}
-                </li>
-              ))}
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
+                    {/* Second column */}
+                    <ul>
+                        {event_list
+                            .slice(Math.ceil(event_list.length / 2))
+                            .map((event, index) => (
+                                <li
+                                    key={event.$id}
+                                    className="text-base text-black font-qregular"
+                                >
+                                    {event}
+                                </li>
+                            ))}
+                    </ul>
+                </div>
+            </div>
+
             <div
                 id="main"
                 className="flex justify-center bg-lightBlue h-[75vh] py-4"
@@ -169,7 +145,6 @@ const HomePage = () => {
                     <h2 className="text-2xl mb-4 py-3 lg:text-4xl">
                         Today's Schedule
                     </h2>
-
                     <ul>{event_list}</ul>
                 </div>
             </div>
@@ -178,4 +153,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-removeEventListener;
