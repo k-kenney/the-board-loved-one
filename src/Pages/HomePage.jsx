@@ -59,7 +59,7 @@ const HomePage = () => {
     // Construct the time string without a leading zero in the hour
     const formattedTime = `${hours}:${formattedMinutes} ${ampm}`;
     return (
-      <li key={event.$id} className="text-base text-white font-qregular">
+      <li key={event.$id} className="text-base text-black font-qregular">
         {formattedTime} {event.title}
       </li>
     );
@@ -95,9 +95,40 @@ const HomePage = () => {
           )}
         </ul>
       </div>
+      
+      <div
+        id="main"
+        className="flex justify-center text-black bg-lightBlue h-[75vh] py-4"
+      >
+        <div className="grid grid-cols-2 gap-8">
+          {/* First column */}
+          <ul>
+            {event_list
+              .slice(0, Math.ceil(event_list.length / 2))
+              .map((event, index) => (
+                <li
+                  key={event.$id}
+                  className="text-base text-black font-qregular"
+                >
+                  {event}
+                </li>
+              ))}
+          </ul>
 
-      <div id="main" className="flex justify-center bg-lightBlue h-[75vh] py-4">
-        <ul>{event_list}</ul>
+          {/* Second column */}
+          <ul>
+            {event_list
+              .slice(Math.ceil(event_list.length / 2))
+              .map((event, index) => (
+                <li
+                  key={event.$id}
+                  className="text-base text-black font-qregular"
+                >
+                  {event}
+                </li>
+              ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
