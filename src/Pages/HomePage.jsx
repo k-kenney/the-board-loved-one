@@ -161,6 +161,4 @@ const HomePage = () => {
     );
 };
 
-//---------------test below
-
 export default HomePage;
