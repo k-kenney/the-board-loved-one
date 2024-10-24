@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 function Clock() {
     const [time, setTime] = useState(
         new Date().toLocaleTimeString([], {
-            hour: "2-digit",
+            hour: "numeric",
             minute: "2-digit",
         })
     );
@@ -12,7 +12,7 @@ function Clock() {
         const intervalId = setInterval(() => {
             setTime(
                 new Date().toLocaleTimeString([], {
-                    hour: "2-digit",
+                    hour: "numeric",
                     minute: "2-digit",
                 })
             );
@@ -22,7 +22,7 @@ function Clock() {
     }, []);
 
     return (
-        <div id="clock">
+        <div id="clock" className="text-3xl lg:text-5xl">
             <h1>{time}</h1>
         </div>
     );
@@ -54,8 +54,12 @@ export function DayOfWeek() {
     };
     return (
         <div id="day-of-week">
-            <h2>{date.toLocaleDateString(undefined, dayOption)}</h2>
-            <p>{date.toLocaleDateString(undefined, dateOption)}</p>
+            <h2 className="text-3xl lg:text-5xl">
+                {date.toLocaleDateString(undefined, dayOption)}
+            </h2>
+            <p className="text-sm text-center lg:text-xl">
+                {date.toLocaleDateString(undefined, dateOption)}
+            </p>
         </div>
     );
 }
@@ -84,6 +88,7 @@ export function WeatherComponent() {
                 );
                 setTemperature(tempInFahrenheit);
                 setLocationName(data.name); // Setting the location name (city)
+
                 setLoading(false);
             } else {
                 setError(data.message);
@@ -124,8 +129,8 @@ export function WeatherComponent() {
 
     return (
         <div id="location">
-            <h2>{locationName}</h2>
-            <p>{temperature}°F</p>
+            <h2 className="text-xl lg:text-3xl">{locationName}</h2>
+            <p className="text-3xl lg:text-5xl">{temperature}°F</p>
         </div>
     );
 }

@@ -2,40 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-#local-data {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* #local-data {
     padding: 15px 20px 10px 20px;
-}
+} */
 
-#clock,
-#day-of-week,
-#location {
-    color: black;
-}
-
-#reminder-list ul {
-    color: balck;
+/* #reminder-list ul {
     text-align: center;
-    background-color: #fbca51;
-}
+} */
 
-#main {
-    background-color: #c2eefe;
+/* #main {
     padding: 15px 0;
-    display: flex;
-    justify-content: center;
-    color: black;
-}
-
+} */
+/* 
 #schedule {
-    background-color: #77cfff;
-    border: 5px solid #4c4e69;
-    border-radius: 25px;
     width: 90%;
     padding: 20px;
-}
+} */
 
 /*-------- Login Page Styles -------- */
 
@@ -53,7 +35,7 @@
     justify-content: center;
 }
 
-#login-bt {
+button {
     background-color: #77cfff;
     border: #77cfff solid 2px;
     width: 20%;
@@ -65,3 +47,55 @@
     justify-content: space-between;
 }
 /*-------- End of Login Page Styles -------- */
+
+/*-------- Sign Up Page Styles -------- */
+#sign-up-page {
+    border: #4c4e69 solid 1px;
+    padding: 25px;
+}
+
+#sign-up-page img {
+    margin-left: -15px;
+}
+
+#sign-up-header {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: center;
+    margin-top: -40px;
+}
+
+#sign-up-header img {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+
+#sign-up-header h2 {
+    font-size: 1.5rem;
+    margin-right: 35px;
+    margin-top: -15px;
+}
+
+#sign-up-main {
+    width: 75%;
+    margin-top: -20px;
+}
+
+#sign-up-main h2 {
+    font-size: 1.5rem;
+}
+#sign-up-main img {
+    border: black 5px solid;
+    width: 25%;
+    margin: 20px 0;
+}
+
+#sign-up-main button {
+    margin-top: 20px;
+    padding: 5px;
+    width: 200px;
+}
+
+/*-------- End of Sign Up Page Styles -------- */
