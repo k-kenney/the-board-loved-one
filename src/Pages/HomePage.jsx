@@ -94,7 +94,7 @@ const HomePage = () => {
                         {event_list
                             .slice(0, Math.ceil(event_list.length / 2))
                             .map((event) => (
-                                <li key={event.$id} className="text-large text-black font-qregular">
+                                <li key={event.$id} className="text-base text-black font-qregular">
                                     {event}
                                 </li>
                             ))}
