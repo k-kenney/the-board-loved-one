@@ -73,11 +73,7 @@ const HomePage = () => {
                 <div><WeatherComponent /></div>
             </div>
 
-
-            <div
-                id="reminder-list"
-                className="bg-yellow text-center py-3 lg:text-2xl "
-            >
+            <div id="reminder-list" className="bg-yellow text-center py-3 lg:text-2xl">
                 <ul>
                     {concerns.length > 0 ? (
                         concerns.map((concern) => (
@@ -91,71 +87,35 @@ const HomePage = () => {
                 </ul>
             </div>
 
-      <div
-        id="reminder-list"
-        className="bg-yellow text-center py-3 lg:text-2xl "
-      >
-        <ul>
-          {concerns.length > 0 ? (
-            concerns.map((concern) => (
-              <li className="py-1" key={concern.$id}>
-                • {concern.concern}{" "}
-              </li>
-            ))
-          ) : (
-            <li>No concerns found.</li>
-          )}
-        </ul>
-      </div>
-      
-      <div
-        id="main"
-        className="flex justify-center text-black bg-lightBlue h-[75vh] py-4"
-      >
-        <div className="grid grid-cols-2 gap-8">
-          {/* First column */}
-          <ul>
-            {event_list
-              .slice(0, Math.ceil(event_list.length / 2))
-              .map((event, index) => (
-                <li
-                  key={event.$id}
-                  className="text-base text-black font-qregular"
-                >
-                  {event}
-                </li>
-              ))}
-          </ul>
+            <div id="main" className="flex justify-center text-black bg-lightBlue h-[75vh] py-4">
+                <div className="grid grid-cols-2 gap-8">
+                    {/* First column */}
+                    <ul>
+                        {event_list
+                            .slice(0, Math.ceil(event_list.length / 2))
+                            .map((event) => (
+                                <li key={event.$id} className="text-base text-black font-qregular">
+                                    {event}
+                                </li>
+                            ))}
+                    </ul>
 
-          {/* Second column */}
-          <ul>
-            {event_list
-              .slice(Math.ceil(event_list.length / 2))
-              .map((event, index) => (
-                <li
-                  key={event.$id}
-                  className="text-base text-black font-qregular"
-                >
-                  {event}
-                </li>
-              ))}
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
-            <div
-                id="main"
-                className="flex justify-center bg-lightBlue h-[75vh] py-4"
-            >
-                <div
-                    id="schedule"
-                    className="bg-blue border-4 border-gray rounded-lg w-[90%] p-5"
-                >
-                    <h2 className="text-2xl mb-4 py-3 lg:text-4xl">
-                        Today's Schedule
-                    </h2>
+                    {/* Second column */}
+                    <ul>
+                        {event_list
+                            .slice(Math.ceil(event_list.length / 2))
+                            .map((event) => (
+                                <li key={event.$id} className="text-base text-black font-qregular">
+                                    {event}
+                                </li>
+                            ))}
+                    </ul>
+                </div>
+            </div>
 
+            <div id="schedule" className="flex justify-center bg-lightBlue h-[75vh] py-4">
+                <div className="bg-blue border-4 border-gray rounded-lg w-[90%] p-5">
+                    <h2 className="text-2xl mb-4 py-3 lg:text-4xl">Today's Schedule</h2>
                     <ul>{event_list}</ul>
                 </div>
             </div>
