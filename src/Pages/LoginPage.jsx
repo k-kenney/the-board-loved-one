@@ -11,7 +11,7 @@ const LoginPage = () => {
 
             <h1 className="text-5xl pb-10">The Board</h1>
             <button id="login-bt" className="text-1xl ">
-                Login
+                <a href="/login-credentials">Login</a>
             </button>
             <div id="sign-up-info" className="pt-5">
                 <p>Don't have and account?</p>
