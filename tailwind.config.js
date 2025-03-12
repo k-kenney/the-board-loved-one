@@ -17,6 +17,9 @@ export default {
             fontFamily: {
                 font: ["Questrial", "sans-serif"],
             },
+            backgroundImage: {
+                "icon-left-arrow": "url('./src/assets/left-arrow.png')",
+            },
         },
     },
     plugins: [],
