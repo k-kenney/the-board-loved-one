@@ -1,14 +1,15 @@
 import React from "react";
 import LeftArrowImage from "../assets/left-arrow.png";
 import LogoImage from "../assets/logoGrey.png";
+import { Link } from "react-router-dom";
 
 const LoginCredsPage = () => {
     return (
         <div>
             <div id="sign-up-page" className="font-font">
-                <a href="/login">
+                <Link to="/login">
                     <img src={LeftArrowImage} alt="Return Arrow" />
-                </a>
+                </Link>
                 <div id="sign-up-header">
                     <img src={LogoImage} alt="Logo" />
                     <h2>The Board</h2>

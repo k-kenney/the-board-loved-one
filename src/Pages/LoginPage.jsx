@@ -1,6 +1,7 @@
 // import React from "react";
 import LogoImage from "../assets/logoGrey.png";
-// import SignUpPage from "./SignUpPage";
+import SignUpPage from "./SignUpPage";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
     return (
@@ -11,13 +12,13 @@ const LoginPage = () => {
 
             <h1 className="text-5xl pb-10">The Board</h1>
             <button id="login-bt" className="text-1xl ">
-                <a href="/login-credentials">Login</a>
+                <Link to="/login-credentials">Login</Link>
             </button>
             <div id="sign-up-info" className="pt-5">
                 <p>Don't have and account?</p>
-                <a className="pl-5 text-darkPurple" href="/sign-up">
+                <Link className="pl-5 text-darkPurple" to="/sign-up">
                     Sign Up
-                </a>
+                </Link>
             </div>
         </div>
     );
